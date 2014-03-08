@@ -144,7 +144,7 @@
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Initial Vault Amount";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txbxBankInitialVaultAmount
             // 

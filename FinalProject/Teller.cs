@@ -62,7 +62,7 @@ namespace FinalProject
                 //uiHelper.GeneralMessage("EXCEPTION (OperationCanceledException) in TellerProc (with TaskID=" +
                 //                        Task.CurrentId + "). Message: " +
                 //                        "   StackTrace: " + oce.StackTrace + "  Target Site: " + oce.TargetSite);
-                throw;
+                //throw;
             }
             catch(Exception ex)
             {
@@ -76,7 +76,7 @@ namespace FinalProject
             string tempString;
             decimal balanceOut;
             bool transactionSuccess = false;
-            bool overdraftFlag;
+            //bool overdraftFlag;
 
             //uiHelper.GeneralMessage("2.5. Teller  started processing transaction...(with TaskID=" + Task.CurrentId + ")");
             
@@ -130,7 +130,7 @@ namespace FinalProject
             List<Transaction> transactionHistory = activeCustomer.TransactionHistory;
             foreach (Transaction trans in transactionHistory)
             {
-                
+                uiHelper.AddCustomerTransaction(trans);
             }
         }
 

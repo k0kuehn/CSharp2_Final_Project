@@ -92,10 +92,10 @@ namespace FinalProject
             lock (customerListLock)
             {
                 int listCount = customerList.Count;
-                uiHelper.GeneralMessage("Customer being returned to the available list!  count="+listCount);
+                //uiHelper.GeneralMessage("Customer being returned to the available list!  count="+listCount);
                 customerList.Add(customer);
                 listCount = customerList.Count;
-                uiHelper.GeneralMessage("Customer has been returned to the available list!  count=" + listCount);
+                //uiHelper.GeneralMessage("Customer has been returned to the available list!  count=" + listCount);
             }
         }
     }

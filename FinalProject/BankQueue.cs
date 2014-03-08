@@ -17,8 +17,6 @@ namespace FinalProject
         {
             queue = new BlockingCollection<Transaction>();
             cancelToken = ct;
-
-            //queue.Add(new Transaction(new Customer("cust100",(decimal)20), (decimal)100, TransactionType.Deposit));
         }
 
         public Transaction Dequeue()

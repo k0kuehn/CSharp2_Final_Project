@@ -9,9 +9,16 @@ namespace FinalProject
     class UIHelper
     {
         private BankSimulatorForm form;
-        public void AddBankOutOfFundsCustomerTransaction(Transaction t, decimal number1) { }
-        public void AddCustomerTransaction(Transaction t, decimal number1, bool b) { }
-        public void AddListBoxItems(string s, string[] sa) { }
+
+        public void AddCustomerTransaction(Transaction t) 
+        {
+            bool b = true;
+            form.syncContext.Post((b1) =>
+            {
+                form.listBox1.Items.Add(t.Customer + ": " + t.Type + " - " + t.Amount);
+                form.listBox1.SelectedIndex = form.listBox1.Items.Count - 1;
+            }, b);
+        }
         public void AddTellerStartedMessage(int? taskID)
         {
             bool b = true;

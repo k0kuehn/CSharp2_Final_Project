@@ -77,11 +77,8 @@ namespace FinalProject
 
         private int GetConfigurationInt32(string s1, string s2, int number) { return number; }
 
-        public void StartButtonState(bool b) { }
-        public void StopButtonState(bool b) { }
-
-
-
+        //public void StartButtonState(bool b) { }
+        //public void StopButtonState(bool b) { }
 
 
         private void CalculateInitialCustomerAmount(string debug_called_from_what_location="<none given>")
@@ -173,7 +170,7 @@ namespace FinalProject
             return true;
         }
 
-
+        #region validation stuff
         private bool ValidateInputFieldsForInitCustomerAmount()
         {
 
@@ -192,7 +189,7 @@ namespace FinalProject
         private bool ValidateInputFieldInitialVaultBalance()
         {
             decimal bankInitialVaultAmount;
-            int bankNumberOfCustomers;
+            //int bankNumberOfCustomers;
 
             bool validate1 = Decimal.TryParse(txbxBankInitialVaultAmount.Text, out bankInitialVaultAmount);
             if (!validate1)
@@ -277,16 +274,11 @@ namespace FinalProject
             return true;
         }
 
-
+        #endregion
 
 
         private void UpdateCustomerInitialAmount(string s1, string s2) { }
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txbxBankInitialVaultAmount_TextChanged(object sender, EventArgs e)
         {

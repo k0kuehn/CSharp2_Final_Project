@@ -27,7 +27,7 @@ namespace FinalProject
 
             // Cannot start the transaction Generator until the CustomerList is ready (ie not null)
             while (bank.Customers==null) {
-                Thread.Sleep(100);
+                //Thread.Sleep(100);
             }
 
             this.transactionGenerator = new TransactionGenerator(uiHelper, ct, bank.BankQueue, bank.Customers, maxTransactionAmount, timeoutThrottle);
